@@ -1,0 +1,34 @@
+
+Basics 
+
+A starting point for social web apps on Rails 3.x.  Extracted from Hit The Courts.
+
+Includes 
+
+  -Clearance, for user auth
+  -omniauth and omniauth-facebook, for facebook auth
+  -basic logic for user creation via FB or not, and basic account merging
+  -koala, for general FB usage
+
+  -delayed job, for async email
+  -workless, so DJ workers can be auto-scaled on Heroku
+  
+  -twitter-bootstrap-rails, as a CSS framework
+  -very basic layout - navbar, flash display, footer
+  
+
+
+Usage 1 - configure the basics for your app
+
+     # config/environments/production.rb
+     config.action_mailer.default_url_options = { :host => ApplicationHostName }
+     
+     Replace navbar and footer placeholders
+     
+Usage 2 - add app logic
+     
+     add your own LESS/CSS on top of twitter bootstrap
+     
+     
+
+

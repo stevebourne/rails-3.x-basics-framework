@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>title</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+
+<link rel="shortcut icon" href="/images/favicon.ico"> 
+
+<%= stylesheet_link_tag    "application", :media => "all"  %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<%= yield :head %>
+
+</head>
+
+<body>
+
+
+<div class="wrapper">
+<%= render :partial => 'layouts/navbar' %>
+
+  <div class="container">
+
+    <div class="row">
+        <div id="flash">
+          <% flash.each do |key, value| -%>
+            <div id="flash_<%= key %>"  class="alert <%= 
+            case key.to_s
+		  	  when "error" then "alert-error"
+		  	  when "success" then "alert-success"
+			  else "alert-info"
+			 end
+            %>">
+              <a class="close" data-dismiss="alert">×</a>
+              <%=h value %>
+            </div> 
+          <% end %>
+        </div>
+
+    </div>
+
+  	<%= yield %>
+
+  </div>
+
+  
+<div class="push"></div>
+</div>  <!--wrapper -->
+
+<div class="container">    <!-- -->
+
+<div id="footer" class='row'> 
+<div class="eight columns">
+
+  <ul>
+    <li><a href="#">Contact us</a></li>
+    <li><a href="#">About us</a></li>
+    <li><a href="#">Blog</a></li>
+  </ul>
+</div>  <!--footer navlist columns -->
+
+<div class="four columns">
+ <p> 
+  Copyright 2012.  All rights reserved.
+ </p> 
+</div>  <!--copyright columns -->
+
+</div>  <!--footer -->
+
+</div>  <!--container -->
+
+<%= yield :scripts %>
+
+</body>
+</html>
