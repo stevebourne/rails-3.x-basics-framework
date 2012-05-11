@@ -1,4 +1,13 @@
 Basics::Application.routes.draw do
+
+  resources :users
+
+
+  resources :authentications
+
+  match "/auth/:provider/callback" => "sessions#create_from_omniauth"
+  match "/signout" => "sessions#destroy", :as => :signout  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

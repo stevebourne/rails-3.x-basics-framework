@@ -18,17 +18,26 @@ Includes
   
 
 
-Usage 1 - configure the basics for your app
+Usage - get the basics working
 
      # config/environments/production.rb
      config.action_mailer.default_url_options = { :host => ApplicationHostName }
      
-     Replace navbar and footer placeholders
+     # config/initializers/omniauth.rb
+     Provide FB APP_KEY and APP_SECRET
      
-Usage 2 - add app logic
+     rake db:migrate
+     
+   rename app, if necessary (use rename gem or manually)
+     
+Usage - add app logic
      
      add your own LESS/CSS on top of twitter bootstrap
      
+     customize user model/views/mailer
      
+     Replace navbar and footer placeholders
+     
+     add app-specific models/views/controllers
 
 
