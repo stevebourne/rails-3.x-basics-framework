@@ -1,6 +1,9 @@
 <h1>Editing user</h1>
 
-<%= render 'form' %>
+<%= form_for @user, :html => { :class => "form-horizontal" } do |form| %>
+  <%= render :partial => '/users/form', :object => form %>
+  <div class="controls">
+    <%= form.submit 'Save Changes', :class => "btn btn-large btn-primary"  %>
+  </div>
+<% end %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>

@@ -9,9 +9,9 @@
 		<%= link_to("App Name!", root_path, :id => "page_title", :class => "brand") %>
         <div class="nav-collapse">
           <ul class="nav">
-	        <li>nav 1</li>
-	        <li>nav 2</li>
-	        <li>nav 3</li>
+	        <li><%= link_to("nav 1", root_path) %></li>
+	        <li><%= link_to("nav 2", root_path) %></li>
+	        <li><%= link_to("nav 3", root_path) %></li>
           </ul>
           <p class="navbar-text pull-right" id='sign_in_status'><%= render :partial => 'layouts/sign_in_state'%></p>
         </div>

@@ -5,11 +5,15 @@
 </p>
 
 <%= form_for :password, :url => passwords_path do |form| %>
-  <div class="text_field">
-    <%= form.label :email, "Email address" %>
-    <%= form.text_field :email, :type => "email" %>
+  <div class="text_field control-group">
+    <%= form.label :email, "Email address", :class => "control-label" %>
+    <div class="controls">
+      <%= form.text_field :email, :type => "email" %>
+    </div>
   </div>
-  <div class="submit_field">
-    <%= form.submit "Reset password" %>
+  <div class="submit_field control-group">
+    <div class="controls">
+      <%= form.submit "Reset password", :class => "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

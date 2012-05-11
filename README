@@ -28,6 +28,8 @@ Usage - get the basics working
      
      rake db:migrate
      
+     rake assets:precompile
+
    rename app, if necessary (use rename gem or manually)
      
 Usage - add app logic

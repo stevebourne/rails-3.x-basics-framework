@@ -5,3 +5,56 @@
  *= require_self
  *= require_tree . 
 */
+
+/* header styles
+================================================== */
+
+
+.wrapper > .container {
+    padding-top: 60px;
+}
+
+/* footer styles
+================================================== */
+
+html, body {
+     height: 100%;
+}
+
+.footer {
+    padding: 17px 0 18px 0;
+    border-top: 1px solid #eee;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -63px;
+}
+
+.push {
+   height: 63px;
+}
+        
+        
+#footer {
+  font-size: 12px;
+}
+
+#footer p {
+    text-align: right;
+}
+
+
+#footer li {
+    padding-left: 40px; 
+    list-style-type: none;
+    display: inline;
+}
+
+p.fineprint {
+	color: #a5a09b;
+}
+
+

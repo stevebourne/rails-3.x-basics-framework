@@ -8,3 +8,22 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+
+// modal for sign in (in header)
+
+$(function() {
+		
+	$( "#sign_in_form" ).modal({
+  		show: false
+	});
+
+
+	$( "#sign_in_link" )
+		.click(function() {
+			$( "#sign_in_form" ).modal( "show" );
+			return false;	
+		});
+		
+		
+});

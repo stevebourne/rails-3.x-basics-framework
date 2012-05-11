@@ -1,5 +1,5 @@
 <% if signed_in? %>
-  Signed in as <%= link_to_unless_current current_user.friendlyname, user_path(current_user) %>  (<%= link_to "Sign out", session_path, :method => :delete %>)
+  Signed in as <%= link_to_unless_current current_user.friendly_name, user_path(current_user) %>  (<%= link_to "Sign out", session_path, :method => :delete %>)
 <% else %>
   <%= link_to "Sign in", sign_in_path, :id => 'sign_in_link' %>          
 <% end %>

@@ -1,8 +1,35 @@
-<div class="text_field">
-  <%= form.label :email %>
-  <%= form.text_field :email, :type => "email" %>
-</div>
-<div class="password_field">
-  <%= form.label :password %>
-  <%= form.password_field :password %>
-</div>
+<br/>
+<p>
+<%= link_to image_tag("login-button.png"), "/auth/facebook" %> 
+</p>
+
+<br/>
+<p>
+Or you can register with your email address:  
+</p>
+
+  <div class="field control-group">
+    <%= form.label :email, :class => "control-label"  %>
+    <div class="controls">
+      <%= form.text_field :email %>
+    </div>
+  </div>
+  <div class="field control-group">
+    <%= form.label :password, :class => "control-label"   %>
+    <div class="controls">
+      <%= form.password_field :password %>
+    </div>
+  </div>
+  <div class="field control-group">
+    <%= form.label :first_name, :class => "control-label"  %>
+    <div class="controls">
+      <%= form.text_field :first_name %>
+    </div>
+  </div>
+  <div class="field control-group">
+    <%= form.label :last_name, :class => "control-label"  %>
+    <div class="controls">
+      <%= form.text_field :last_name %>
+    </div>
+  </div>
+  
