@@ -1,5 +1,6 @@
 
 Basics 
+------
 
 A starting point for social web apps on Rails 3.x.  Extracted from Hit The Courts.
 
@@ -7,7 +8,7 @@ Includes
 
   -Clearance, for user auth
   -omniauth and omniauth-facebook, for facebook auth
-  -basic logic for user creation via FB or not, and basic account merging
+  -basic logic for user creation via FB or not, basic account merging
   -koala, for general FB usage
 
   -delayed job, for async email
@@ -16,7 +17,7 @@ Includes
   -twitter-bootstrap-rails, as a CSS framework
   -very basic layout - navbar, flash display, footer
   
-
+  -sqlite in dev/test environments, postGRE in production
 
 Usage - get the basics working
 
@@ -30,7 +31,7 @@ Usage - get the basics working
      
      rake assets:precompile
 
-   rename app, if necessary (use rename gem or manually)
+     rename app, if necessary (use rename gem or manually)
      
 Usage - add app logic
      
