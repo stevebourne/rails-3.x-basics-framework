@@ -24,6 +24,8 @@ Usage - get the basics working
      # config/environments/production.rb
      config.action_mailer.default_url_options = { :host => ApplicationHostName }
      
+     configure heroku with sendgrid basic, add sendgrid username/pwd as environment variables
+     
      # config/initializers/omniauth.rb
      Provide FB APP_KEY and APP_SECRET
      

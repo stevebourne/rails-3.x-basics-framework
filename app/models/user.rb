@@ -15,6 +15,22 @@ class User < ActiveRecord::Base
     end
   end
 
+
+  # obscure permalink
+  before_save :generate_permalink
+ 
+  # enable lookup by permalink, for URL construction
+  def to_param
+    self.permalink
+  end
+
+  def generate_permalink
+    if !self.permalink 
+      self.permalink = Digest::SHA1.hexdigest(Time.now.to_s << rand(10000).to_s).force_encoding('UTF-8')
+      # force_encoding added per http://stackoverflow.com/questions/7437944/sqlite3-varchar-matching-with-like-but-not
+    end
+  end
+
   
   def fb_token
     x = self.authentications.where(:provider => :facebook).first
